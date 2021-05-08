@@ -4,7 +4,7 @@ class Launcher{
             bodyA: bodyA,
             pointB: pointB,
             stiffness: 0.004,
-            length: 5
+            length: 1
         }
         this.pointB = pointB
         this.sling = Constraint.create(options);

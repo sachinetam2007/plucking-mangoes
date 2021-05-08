@@ -32,8 +32,7 @@ function setup() {
 	mango12=new Mango(950,200,30)
 
 
-	engine = Engine.create();
-	world = engine.world;
+
 
 	//Create the Bodies Here.
 
@@ -44,6 +43,7 @@ function setup() {
 
 
 function draw() {
+  Engine.update(engine)
   rectMode(CENTER);
   background(0);
   ground.display();
@@ -102,9 +102,11 @@ function detectCollision(s,m){
 	mangoPosition=m.body.position
 	stonePos=s.body.position
 	var distance=dist(stonePos.x,stonePos.y,mangoPosition.x,mangoPosition.y)
-	if(distance<=s.r+m.r){
+	if(distance<=s.body.circleRadius+m.body.circleRadius){
 		Matter.body.setStatic(m.body,false)
+    console.log(distance)
 	}
+  console.log(distance)
 }
 
 

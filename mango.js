@@ -1,7 +1,7 @@
 class Mango{
     constructor(x,y,r)  {
         var options={
-            isStatic:false,
+            isStatic:true,
             restitution:0.3,
             friction:1.0
             
@@ -23,5 +23,6 @@ class Mango{
         imageMode (CENTER)
         image(this.Image,0,0,this.radius*2,this.radius*2);
         pop ();
+        
     }
   }

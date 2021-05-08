@@ -9,18 +9,18 @@ class Tree {
       this.width = 450;
       this.height = 600;
       this.thickness=10;
-      this.leftbody = Bodies.rectangle(x-this.width/2,y-this.height/2,this.thickness,this.height,options);
-      this.rightbody = Bodies.rectangle(x+this.width/2,y-this.height/2,this.thickness,this.height,options);
+      //this.leftbody = Bodies.rectangle(x-this.width/2,y-this.height/2,this.thickness,this.height,options);
+      //this.rightbody = Bodies.rectangle(x+this.width/2,y-this.height/2,this.thickness,this.height,options);
       this.bottombody = Bodies.rectangle(x,y,this.width,this.thickness,options);
      
       this.Image=loadImage("tree.png")
-      World.add(world, this.leftbody);
-      World.add(world, this.rightbody);
+      //World.add(world, this.leftbody);
+      //World.add(world, this.rightbody);
       World.add(world, this.bottombody);
     }
     display(){
-      var pos1 =this.leftbody.position;
-      var pos2 =this.rightbody.position;
+      //var pos1 =this.leftbody.position;
+      //var pos2 =this.rightbody.position;
       var pos3 =this.bottombody.position;
      push ();
       translate(pos3.x,pos3.y+10); 
