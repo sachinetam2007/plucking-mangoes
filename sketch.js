@@ -103,7 +103,7 @@ function detectCollision(s,m){
 	stonePos=s.body.position
 	var distance=dist(stonePos.x,stonePos.y,mangoPosition.x,mangoPosition.y)
 	if(distance<=s.body.circleRadius+m.body.circleRadius){
-		Matter.body.setStatic(m.body,false)
+		Matter.Body.setStatic(m.body,false)
     console.log(distance)
 	}
   console.log(distance)
